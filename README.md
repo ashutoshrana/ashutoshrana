@@ -1,5 +1,3 @@
-# Ashutosh Rana
-
 Enterprise Architect | Cloud Systems | Enterprise Integration | Enterprise Workflows | Applied Agentic AI
 
 I build practical systems at the intersection of cloud architecture, enterprise integration, enterprise workflows, and applied AI. My work focuses on turning technically complex ideas into production-ready systems that improve reliability, workflow efficiency, and user experience in regulated and large-scale enterprise environments.
