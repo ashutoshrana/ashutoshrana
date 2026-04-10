@@ -15,6 +15,12 @@ I build practical systems at the intersection of cloud architecture, enterprise 
 - integration automation playbooks
 - omnichannel systems and operating architecture notes
 
+## Representative System Themes
+
+- AI-assisted operating systems that preserve context across voice, messaging, dashboards, and systems of record
+- enterprise workflow automation across CRM, ERP, knowledge, and service environments
+- governed AI patterns for regulated and operationally sensitive environments
+
 ## Interests
 
 I’m especially interested in projects, collaborations, and conversations around production-grade AI systems, enterprise modernization, cloud integration, and workflow architecture.
