@@ -1,26 +1,30 @@
-Enterprise Architect | Cloud Systems | Enterprise Integration | Enterprise Workflows | Applied Agentic AI
+Enterprise architect focused on production AI systems, cloud integration, and enterprise workflow automation for regulated operating environments.
 
-I build practical systems at the intersection of cloud architecture, enterprise integration, enterprise workflows, and applied AI. My work focuses on turning technically complex ideas into production-ready systems that improve reliability, workflow efficiency, and user experience in regulated and large-scale enterprise environments.
+My background is in building the infrastructure layer where AI, CRM, ERP, and workflow systems converge. The challenging problems are not at the demo level — they are in the operational seams: compliance-aware knowledge retrieval, cross-channel context continuity, bi-directional system-of-record synchronization, and governed AI handoffs.
 
-## Focus Areas
+## Current focus
 
-- cloud systems and enterprise architecture
-- enterprise integration and workflow automation
-- omnichannel operating models across CRM, ERP, and service systems
-- applied AI and agentic systems for real operations
+- Compliance-aware RAG architecture for regulated enterprise environments
+- Enterprise integration patterns across CRM and ERP platforms
+- Governed agentic AI workflows with audit and policy requirements
+- Multi-agent orchestration across multi-cloud and hybrid environments
 
-## Current Public Build Direction
+## Public repositories
 
-- enterprise RAG patterns
-- integration automation playbooks
-- omnichannel systems and operating architecture notes
+**[enterprise-rag-patterns](https://github.com/ashutoshrana/enterprise-rag-patterns)**
+Reference patterns for compliance-aware retrieval-augmented workflows, context continuity, and governed AI integration in enterprise environments. Designed to work across cloud providers and enterprise platforms — not tied to any specific vendor stack.
 
-## Representative System Themes
+**[integration-automation-patterns](https://github.com/ashutoshrana/integration-automation-patterns)**
+Reliable enterprise integration patterns: event-driven workflows, system-of-record synchronization, and CRM/ERP integration architecture applicable across platforms.
 
-- AI-assisted operating systems that preserve context across voice, messaging, dashboards, and systems of record
-- enterprise workflow automation across CRM, ERP, knowledge, and service environments
-- governed AI patterns for regulated and operationally sensitive environments
+## Technical background
 
-## Interests
+- Production RAG deployment with compliance-aware knowledge retrieval across regulated environments
+- Enterprise CRM and ERP integration across multiple platforms and generations
+- Multi-cloud architecture: AWS, GCP, Azure, OCI
+- AI/ML: LLM orchestration, multi-agent systems, agentic workflow governance
+- Cloud-native integration design for regulated and operationally sensitive environments
 
-I’m especially interested in projects, collaborations, and conversations around production-grade AI systems, enterprise modernization, cloud integration, and workflow architecture.
+## Areas of interest
+
+Production AI systems that stay inside policy boundaries. Enterprise integration that survives operational complexity. Patterns that are platform-agnostic and adoptable across vendor stacks, cloud environments, and regulatory contexts.
