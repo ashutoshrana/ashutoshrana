@@ -44,7 +44,7 @@ pip install integration-automation-patterns
 
 ## Published writing
 
-- [FERPA Compliance in RAG Pipelines: Five Rules Your Enterprise System Probably Breaks](https://github.com/ashutoshrana/enterprise-rag-patterns/blob/main/docs/blog/ferpa-rag-five-rules.md)
+- [FERPA Compliance in RAG Pipelines: Five Rules Your Enterprise System Probably Breaks](https://dev.to/ashutoshrana/ferpa-compliance-in-rag-pipelines-five-rules-your-enterprise-system-probably-breaks-5762)
 - [Implementation Note 02 — FERPA-Compliant RAG: Identity-Scoped Retrieval in Production](https://github.com/ashutoshrana/enterprise-rag-patterns/blob/main/docs/implementation-note-02.md)
 - [Implementation Note 03 — Context Assembly for Multi-Source Enterprise RAG](https://github.com/ashutoshrana/enterprise-rag-patterns/blob/main/docs/implementation-note-03.md)
 
