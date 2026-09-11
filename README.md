@@ -3,76 +3,32 @@
 [![Google Scholar](https://img.shields.io/badge/Google%20Scholar-citations-4285F4?style=flat&logo=google-scholar)](https://scholar.google.co.in/citations?user=51PebpQAAAAJ)
 [![ORCID](https://img.shields.io/badge/ORCID-0009--0007--5838--1204-A6CE39?style=flat&logo=orcid)](https://orcid.org/0009-0007-5838-1204)
 
-[![PyPI enterprise-rag-patterns](https://img.shields.io/pypi/v/enterprise-rag-patterns?label=enterprise-rag-patterns&color=blue)](https://pypi.org/project/enterprise-rag-patterns/)
-[![PyPI regulated-ai-governance](https://img.shields.io/pypi/v/regulated-ai-governance?label=regulated-ai-governance&color=blue)](https://pypi.org/project/regulated-ai-governance/)
-[![PyPI integration-automation-patterns](https://img.shields.io/pypi/v/integration-automation-patterns?label=integration-automation-patterns&color=blue)](https://pypi.org/project/integration-automation-patterns/)
-[![PyPI ferpa-haystack](https://img.shields.io/pypi/v/ferpa-haystack?label=ferpa-haystack&color=blue)](https://pypi.org/project/ferpa-haystack/)
-[![PyPI voice-ai-governance](https://img.shields.io/pypi/v/voice-ai-governance?label=voice-ai-governance&color=blue)](https://pypi.org/project/voice-ai-governance/)
-[![PyPI confidence-escalation](https://img.shields.io/pypi/v/confidence-escalation?label=confidence-escalation&color=blue)](https://pypi.org/project/confidence-escalation/)
+# Enterprise AI tools and integration patterns
 
----
+I build libraries for retrieval access boundaries, pre-action policy checks, reliable integration, and voice handoffs. Start with the specific boundary your application needs to enforce.
 
-Enterprise architect building production AI systems, cloud integration, and enterprise workflow automation for regulated operating environments.
+| Need | Repository | First thing to verify |
+|---|---|---|
+| Keep unauthorized documents out of model context | [enterprise-rag-patterns](https://github.com/ashutoshrana/enterprise-rag-patterns) | Retrieval metadata, principal context, and actual store integration |
+| Evaluate policy before invoking a tool | [regulated-ai-governance](https://github.com/ashutoshrana/regulated-ai-governance) | Protected execution path and required audit configuration |
+| Retry integrations without duplicate business effects | [integration-automation-patterns](https://github.com/ashutoshrana/integration-automation-patterns) | Durable deduplication and crash/replay behavior |
+| Apply access filters in Haystack | [haystack-ferpa-filter](https://github.com/ashutoshrana/haystack-ferpa-filter) | Canonical source for the `ferpa-haystack` distribution; metadata contracts |
+| Preserve context during voice handoffs | [voice-ai-governance](https://github.com/ashutoshrana/voice-ai-governance) | Redaction configuration, Redis behavior, and transfer lifecycle |
+| Escalate uncertain responses or gate a proposed action | [confidence-escalation](https://github.com/ashutoshrana/confidence-escalation) | Difference between post-response evaluation and pre-action checks |
 
-My background is in the infrastructure layer where AI, CRM, ERP, and workflow systems converge. The hard problems are not at the demo level — they are in the operational seams: compliance-aware knowledge retrieval, cross-channel context continuity, bi-directional system-of-record synchronisation, and governed AI handoffs.
+These are implementation tools and reference patterns. Regulatory labels describe intended use cases, not certification or a guarantee of compliance. Scores are heuristics unless calibrated against representative labeled outcomes. See each repository's README, tests, and changelog for supported behavior and unpublished changes; a source branch can differ from its package release.
 
-## Current focus
+## Try one library
 
-- Compliance-aware RAG architecture for regulated enterprise environments (FERPA, HIPAA, GDPR, GLBA)
-- Governed agentic AI workflows covering OWASP Agentic AI Top 10 2026 and EU AI Act
-- Enterprise integration patterns across CRM and ERP platforms
-- Multi-agent orchestration across multi-cloud and hybrid environments
-- Voice and SMS AI pipeline governance for regulated contact centre deployments
+Use an isolated environment and start from the selected repository's source instructions. Run its documented examples and tests with synthetic data before adding production integrations. A passing test covers its specific scenario; it does not establish all framework/store combinations or production adoption.
 
-## Open-source libraries
+For the combined workflow and evaluation materials, start with [enterprise-rag-patterns](https://github.com/ashutoshrana/enterprise-rag-patterns) and follow the implementation documentation available on your selected branch.
 
-### [enterprise-rag-patterns](https://github.com/ashutoshrana/enterprise-rag-patterns) · ![PyPI](https://img.shields.io/pypi/v/enterprise-rag-patterns?color=blue) ![CI](https://github.com/ashutoshrana/enterprise-rag-patterns/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/ashutoshrana/enterprise-rag-patterns/graph/badge.svg)](https://codecov.io/gh/ashutoshrana/enterprise-rag-patterns)
+## Upstream contributions and historical work
 
-Reference patterns for FERPA/HIPAA/GDPR-compliant retrieval-augmented workflows, context continuity, and governed AI integration. Pre-retrieval enforcement — access control before documents enter the LLM context window. Covers 65+ regulations across 25 jurisdictions. Works with LangChain, LlamaIndex, Haystack, CrewAI, AutoGen, Semantic Kernel, Google ADK.
+[CONTRIBUTIONS.md](CONTRIBUTIONS.md) separates independently maintained libraries from upstream contribution forks. Fork presence does not imply upstream ownership or merged contribution status; inspect individual pull requests and upstream releases.
 
-```bash
-pip install enterprise-rag-patterns
-```
-
-### [regulated-ai-governance](https://github.com/ashutoshrana/regulated-ai-governance) · ![PyPI](https://img.shields.io/pypi/v/regulated-ai-governance?color=blue) ![CI](https://github.com/ashutoshrana/regulated-ai-governance/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/ashutoshrana/regulated-ai-governance/graph/badge.svg)](https://codecov.io/gh/ashutoshrana/regulated-ai-governance)
-
-Pre-execution governance layer for AI agents operating under FERPA, HIPAA, GDPR, CCPA, GLBA, EU AI Act, OWASP Agentic AI Top 10 2026, and 25 jurisdictions. Drop-in adapters for 10 major AI frameworks. Every decision produces a structured audit record with a regulation citation.
-
-```bash
-pip install regulated-ai-governance
-```
-
-### [integration-automation-patterns](https://github.com/ashutoshrana/integration-automation-patterns) · ![PyPI](https://img.shields.io/pypi/v/integration-automation-patterns?color=blue) ![CI](https://github.com/ashutoshrana/integration-automation-patterns/actions/workflows/ci.yml/badge.svg) [![codecov](https://codecov.io/gh/ashutoshrana/integration-automation-patterns/graph/badge.svg)](https://codecov.io/gh/ashutoshrana/integration-automation-patterns)
-
-Reliable enterprise integration patterns: event-driven workflows, system-of-record synchronisation, circuit breaker, saga orchestration, transactional outbox, CDC, and Kafka envelope handling. MCP Security Patterns for tool-invocation safety in agentic workflows.
-
-```bash
-pip install integration-automation-patterns
-```
-
-### [ferpa-haystack](https://github.com/ashutoshrana/haystack-ferpa-filter) · ![PyPI](https://img.shields.io/pypi/v/ferpa-haystack?color=blue) ![CI](https://github.com/ashutoshrana/haystack-ferpa-filter/actions/workflows/ci.yml/badge.svg)
-
-FERPA-compliant pre-retrieval metadata filter for Haystack RAG pipelines. Enforces 34 CFR § 99 access control before documents are retrieved. Includes GDPR Art. 17 right-to-erasure filter and multi-tenant FERPA enforcement across institution boundaries (§ 99.34).
-
-```bash
-pip install ferpa-haystack
-```
-
-### [voice-ai-governance](https://github.com/ashutoshrana/voice-ai-governance) · ![PyPI](https://img.shields.io/pypi/v/voice-ai-governance?color=blue) ![CI](https://github.com/ashutoshrana/voice-ai-governance/actions/workflows/ci.yml/badge.svg)
-
-Compliance enforcement middleware for voice and SMS AI pipelines. Warm transfer state management, TCPA/A2P 10DLC SMS compliance, PII scrubbing, confidence-gated escalation, and HIPAA/FERPA/EU AI Act enforcement. Adapters for Pipecat, LiveKit, and Twilio.
-
-```bash
-pip install voice-ai-governance
-```
-
-### [confidence-escalation](https://github.com/ashutoshrana/confidence-escalation) · ![PyPI](https://img.shields.io/pypi/v/confidence-escalation?color=blue) ![CI](https://github.com/ashutoshrana/confidence-escalation/actions/workflows/ci.yml/badge.svg)
-
-Framework-agnostic confidence-gated escalation middleware for LLM agents. Multi-signal scoring across logprob, verbalized confidence, and tool risk. Threshold policies and escalation handlers for LangChain, CrewAI, AutoGen, and Google ADK.
-
-```bash
-pip install confidence-escalation
-```
+[ltngoutDemo](https://github.com/ashutoshrana/ltngoutDemo) is a historical static mockup plus a separately configured Lightning Out experiment. [heroku](https://github.com/ashutoshrana/heroku) is a historical workshop placeholder.
 
 ## Published writing
 
@@ -112,15 +68,6 @@ pip install confidence-escalation
 
 - [FERPA RAG Compliance Demo](https://huggingface.co/spaces/ashuenterprise/enterprise-context-demo) — live filtering demonstration on HuggingFace Spaces
 
-## Technical background
+## Reliability validation
 
-- Production RAG deployment with compliance-aware knowledge retrieval across regulated environments
-- Enterprise CRM and ERP integration across multiple platforms and generations
-- Multi-cloud architecture: AWS, GCP, Azure, OCI
-- AI/ML: LLM orchestration, multi-agent systems, agentic workflow governance
-- Voice and SMS AI pipelines with TCPA/HIPAA/EU AI Act compliance enforcement
-- Cloud-native integration design for regulated and operationally sensitive environments
-
----
-
-*Production AI systems that stay inside policy boundaries. Enterprise integration that survives operational complexity. Patterns that are platform-agnostic and adoptable across vendor stacks, cloud environments, and regulatory contexts.*
+[Implementation, reproducible checks, and validation limits](RELIABILITY_VALIDATION.md) covers the governed workflow across these libraries.
