@@ -67,3 +67,7 @@ For the combined workflow and evaluation materials, start with [enterprise-rag-p
 ## Live demos
 
 - [FERPA RAG Compliance Demo](https://huggingface.co/spaces/ashuenterprise/enterprise-context-demo) — live filtering demonstration on HuggingFace Spaces
+
+## Reliability validation
+
+[Implementation, reproducible checks, and validation limits](RELIABILITY_VALIDATION.md) covers the governed workflow across these libraries.
