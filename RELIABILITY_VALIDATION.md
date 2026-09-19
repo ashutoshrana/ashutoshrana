@@ -3,7 +3,58 @@
 Review branches dated 2026-09-11 implement stricter retrieval boundaries,
 acknowledged audit delivery, durable database effects, and a combined synthetic
 workflow. Pull requests below are the source of truth for merge and CI status.
-These changes do not imply new published package versions.
+The six releases below were published after that review. Their wheel and source
+distributions were rechecked on PyPI on 2026-09-19. Later source changes are not
+part of those releases unless a new version is explicitly listed.
+
+| Package | Verified published version |
+|---|---|
+| enterprise-rag-patterns | [0.47.0](https://pypi.org/project/enterprise-rag-patterns/0.47.0/) |
+| regulated-ai-governance | [0.45.0](https://pypi.org/project/regulated-ai-governance/0.45.0/) |
+| integration-automation-patterns | [0.44.0](https://pypi.org/project/integration-automation-patterns/0.44.0/) |
+| ferpa-haystack | [0.3.0](https://pypi.org/project/ferpa-haystack/0.3.0/) |
+| voice-ai-governance | [0.3.0](https://pypi.org/project/voice-ai-governance/0.3.0/) |
+| confidence-escalation | [0.2.0](https://pypi.org/project/confidence-escalation/0.2.0/) |
+
+## Follow-up review: 2026-09-19
+
+The acceptance criteria for this pass are: reproduce a concrete defect, add a
+regression check, pass the repository's existing checks, build affected packages,
+and verify GitHub CI on the merged revision. Passing checks cover the tested
+behavior; they do not establish that every feature or deployment is error-free.
+
+| Repository | Confirmed gap and source change | Review |
+|---|---|---|
+| enterprise-rag-patterns | Standalone LlamaIndex postprocessing bypassed shared identity/category policy; sync and async paths now use it, with real query-engine tests | [PR 61](https://github.com/ashutoshrana/enterprise-rag-patterns/pull/61) |
+| haystack-ferpa-filter | Malformed identity configuration and cross-institution grants were accepted; configuration is now validated | [PR 14](https://github.com/ashutoshrana/haystack-ferpa-filter/pull/14) |
+| integration-automation-patterns | Nested MCP resource URLs produced the wrong route/origin; configured paths now work and malformed URLs fail validation | [PR 53](https://github.com/ashutoshrana/integration-automation-patterns/pull/53) |
+| voice-ai-governance | Mutable metadata aliases, terminal-session reopening, and PII in mapping keys required additional boundary checks | [PR 18](https://github.com/ashutoshrana/voice-ai-governance/pull/18) |
+| confidence-escalation | Async tools needed an awaited pre-action gate and real OpenAI Agents SDK guardrail coverage | [PR 20](https://github.com/ashutoshrana/confidence-escalation/pull/20) |
+| ard-spec | A failed registry startup could lead the demo to probe another process on its fixed port; startup failure now stops the demo | [PR 2](https://github.com/ashutoshrana/ard-spec/pull/2) |
+| regulated-ai-governance | No new supported defect found in the bounded authorization/audit review; 2,789 tests and the configured lint/type/build checks passed | Existing source retained |
+| ferpa-haystack | Legacy publisher remains disabled; the canonical package is maintained in haystack-ferpa-filter | Existing source retained |
+| ltngoutDemo / heroku | Historical mockup and placeholder documentation still match their repository contents; the mockup's JavaScript syntax checks passed | No speculative AI features added |
+
+These follow-up source changes are **not included in the published versions
+listed above**. Follow each PR and its checks for the current source status.
+
+### Current ecosystem guidance applied
+
+- [MCP security guidance](https://modelcontextprotocol.io/docs/2025-11-25/tutorials/security/security_best_practices)
+  requires tokens intended for the receiving server and addresses session,
+  origin, and scope boundaries. The integration review tests the configured
+  resource boundary; it does not claim complete protocol certification.
+- [MCP Python SDK v2 migration guidance](https://py.sdk.modelcontextprotocol.io/v2/migration/#fastmcp-renamed-to-mcpserver)
+  documents a breaking server API change. A range-only dependency upgrade failed
+  the existing tests, so SDK v1 remains supported until a tested migration exists.
+- [OpenTelemetry's GenAI conventions](https://github.com/open-telemetry/semantic-conventions-genai)
+  now have a dedicated repository. Existing shared-trace tests remain explicit
+  about their schema and payload limits rather than implying full conformance.
+- [GitHub artifact attestations](https://docs.github.com/en/actions/concepts/security/artifact-attestations)
+  establish build provenance, not application security. Package validation must
+  still test artifact contents and installation, in addition to source tests.
+
+## Original implementation evidence
 
 | Repository | Implemented behavior | Validation and review |
 |---|---|---|
@@ -21,7 +72,7 @@ These changes do not imply new published package versions.
 
 ## Reproduce the combined workflow
 
-See the [demo setup and limits](https://github.com/ashutoshrana/integration-automation-patterns/blob/codex/reliability-and-adoption-20260911/docs/GOVERNED_SERVICE_DEMO.md)
+See the [demo setup and limits](https://github.com/ashutoshrana/integration-automation-patterns/blob/main/docs/GOVERNED_SERVICE_DEMO.md)
 and its [dedicated CI job](https://github.com/ashutoshrana/integration-automation-patterns/actions/workflows/governed-service-demo.yml).
 The CI workflow pins sibling source revisions and OpenTelemetry SDK 1.44.0.
 
@@ -54,8 +105,8 @@ Observed in the defined local fixture run:
   every developing GenAI semantic convention.
 - Control catalogs require authoritative applicability review. Supplied policy
   booleans are not independently verified evidence or legal conclusions.
-- No external adopter results, upstream acceptance, PyPI publication, or
-  production rollout is claimed. Add such evidence only when it actually exists.
+- Package publication is verified above. No external adopter results, upstream
+  acceptance of these changes, or production rollout is claimed.
 
 Expansion should follow a concrete integration need, a supported-version test,
 and measured behavior. More framework names or jurisdiction examples alone do
