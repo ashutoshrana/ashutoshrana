@@ -9,12 +9,25 @@ part of those releases unless a new version is explicitly listed.
 
 | Package | Verified published version |
 |---|---|
-| enterprise-rag-patterns | [0.47.0](https://pypi.org/project/enterprise-rag-patterns/0.47.0/) |
+| enterprise-rag-patterns | [0.47.1](https://pypi.org/project/enterprise-rag-patterns/0.47.1/) |
 | regulated-ai-governance | [0.45.0](https://pypi.org/project/regulated-ai-governance/0.45.0/) |
-| integration-automation-patterns | [0.44.0](https://pypi.org/project/integration-automation-patterns/0.44.0/) |
-| ferpa-haystack | [0.3.0](https://pypi.org/project/ferpa-haystack/0.3.0/) |
-| voice-ai-governance | [0.3.0](https://pypi.org/project/voice-ai-governance/0.3.0/) |
-| confidence-escalation | [0.2.0](https://pypi.org/project/confidence-escalation/0.2.0/) |
+| integration-automation-patterns | [0.44.1](https://pypi.org/project/integration-automation-patterns/0.44.1/) |
+| ferpa-haystack | [0.3.1](https://pypi.org/project/ferpa-haystack/0.3.1/) |
+| voice-ai-governance | [0.3.1](https://pypi.org/project/voice-ai-governance/0.3.1/) |
+| confidence-escalation | [0.3.0](https://pypi.org/project/confidence-escalation/0.3.0/) |
+
+Release acceptance on 2026-09-19: all five new publishing pipelines passed.
+All six listed packages were installed together directly from PyPI in a fresh
+Python 3.14.4 environment. The 12 wheel/source files matched PyPI SHA-256 metadata,
+installed versions matched their runtime identities, and the dependency check
+reported no conflicts. The combined synthetic workflow, custom-key privacy
+regression, and new confidence API smoke checks passed against those installs.
+
+Publication runs: [RAG](https://github.com/ashutoshrana/enterprise-rag-patterns/actions/runs/35476253469),
+[integration](https://github.com/ashutoshrana/integration-automation-patterns/actions/runs/35476234024),
+[Haystack filter](https://github.com/ashutoshrana/haystack-ferpa-filter/actions/runs/35476254083),
+[voice](https://github.com/ashutoshrana/voice-ai-governance/actions/runs/35476347482),
+[confidence](https://github.com/ashutoshrana/confidence-escalation/actions/runs/35476351582).
 
 ## Follow-up review: 2026-09-19
 
@@ -35,8 +48,9 @@ behavior; they do not establish that every feature or deployment is error-free.
 | ferpa-haystack | Legacy publisher remains disabled; the canonical package is maintained in haystack-ferpa-filter | Existing source retained |
 | ltngoutDemo / heroku | Historical mockup and placeholder documentation still match their repository contents; the mockup's JavaScript syntax checks passed | No speculative AI features added |
 
-These follow-up source changes are **not included in the published versions
-listed above**. Follow each PR and its checks for the current source status.
+The five affected package releases listed above include these follow-up source
+changes. Governance remains at 0.45.0 because its source did not change. ARD and
+portfolio documentation changes are delivered through their GitHub repositories.
 
 ### Current ecosystem guidance applied
 
