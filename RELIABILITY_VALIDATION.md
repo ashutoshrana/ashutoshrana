@@ -28,7 +28,7 @@ behavior; they do not establish that every feature or deployment is error-free.
 | enterprise-rag-patterns | Standalone LlamaIndex postprocessing bypassed shared identity/category policy; sync and async paths now use it, with real query-engine tests | [PR 61](https://github.com/ashutoshrana/enterprise-rag-patterns/pull/61) |
 | haystack-ferpa-filter | Malformed identity configuration and cross-institution grants were accepted; configuration is now validated | [PR 14](https://github.com/ashutoshrana/haystack-ferpa-filter/pull/14) |
 | integration-automation-patterns | Nested MCP resource URLs produced the wrong route/origin; configured paths now work and malformed URLs fail validation | [PR 53](https://github.com/ashutoshrana/integration-automation-patterns/pull/53) |
-| voice-ai-governance | Mutable metadata aliases, terminal-session reopening, and PII in mapping keys required additional boundary checks | [PR 18](https://github.com/ashutoshrana/voice-ai-governance/pull/18) |
+| voice-ai-governance | Mutable metadata aliases, terminal-session reopening, and PII in mapping keys required additional boundary checks; sensitive values are classified using the original key before custom label redaction | [PR 18](https://github.com/ashutoshrana/voice-ai-governance/pull/18), independent-review correction [PR 19](https://github.com/ashutoshrana/voice-ai-governance/pull/19) |
 | confidence-escalation | Async tools needed an awaited pre-action gate and real OpenAI Agents SDK guardrail coverage | [PR 20](https://github.com/ashutoshrana/confidence-escalation/pull/20) |
 | ard-spec | A failed registry startup could lead the demo to probe another process on its fixed port; startup failure now stops the demo | [PR 2](https://github.com/ashutoshrana/ard-spec/pull/2) |
 | regulated-ai-governance | No new supported defect found in the bounded authorization/audit review; 2,789 tests and the configured lint/type/build checks passed | Existing source retained |
@@ -75,6 +75,10 @@ listed above**. Follow each PR and its checks for the current source status.
 See the [demo setup and limits](https://github.com/ashutoshrana/integration-automation-patterns/blob/main/docs/GOVERNED_SERVICE_DEMO.md)
 and its [dedicated CI job](https://github.com/ashutoshrana/integration-automation-patterns/actions/workflows/governed-service-demo.yml).
 The CI workflow pins sibling source revisions and OpenTelemetry SDK 1.44.0.
+The [September 19 pin refresh](https://github.com/ashutoshrana/integration-automation-patterns/pull/54)
+updates both the workflow and its documented revision table to the reviewed
+main-branch commits. Fresh installation of those revisions passed the combined
+regression and dependency checks; the PR records its CI result.
 
 The workflow uses an authorized retrieval fixture, a recording model stand-in,
 a persisted synthetic approval, a current-policy recheck, database effects, and
