@@ -18,7 +18,6 @@
   },
   "pip_check": "No broken requirements found.",
   "combined_synthetic_demo": {
-    "directory": "/private/tmp/personal-ai-research-20260920/final-pypi-demo/results0442",
     "scope": "synthetic local fixtures; fake model and reviewer; not production calibration",
     "unauthorized_disclosures": 0,
     "unauthorized_actions": 0,
