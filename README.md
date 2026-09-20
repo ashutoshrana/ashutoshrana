@@ -7,6 +7,10 @@
 
 I build libraries for retrieval access boundaries, pre-action policy checks, reliable integration, and voice handoffs. Start with the specific boundary your application needs to enforce.
 
+**New to these projects?** Read the [project guide](PROJECT_GUIDE.md) for a package
+comparison, installation commands, practical use cases, and how the libraries can
+work together.
+
 | Need | Repository | First thing to verify |
 |---|---|---|
 | Keep unauthorized documents out of model context | [enterprise-rag-patterns](https://github.com/ashutoshrana/enterprise-rag-patterns) | Retrieval metadata, principal context, and actual store integration |
@@ -22,7 +26,7 @@ These are implementation tools and reference patterns. Regulatory labels describ
 
 Use an isolated environment and start from the selected repository's source instructions. Run its documented examples and tests with synthetic data before adding production integrations. A passing test covers its specific scenario; it does not establish all framework/store combinations or production adoption.
 
-For the combined workflow and evaluation materials, start with [enterprise-rag-patterns](https://github.com/ashutoshrana/enterprise-rag-patterns) and follow the implementation documentation available on your selected branch.
+For a combined example, use the [governed service demo](https://github.com/ashutoshrana/integration-automation-patterns/blob/main/docs/GOVERNED_SERVICE_DEMO.md), which connects retrieval, policy checks, escalation, durable delivery, and a voice handoff using synthetic data.
 
 ## Upstream contributions and historical work
 
