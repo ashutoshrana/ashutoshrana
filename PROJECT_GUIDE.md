@@ -5,19 +5,30 @@ permitted documents, deciding when to escalate, handling voice transfers, and
 delivering events reliably. You can use one library independently; you do not
 need to adopt the whole collection.
 
+To assess the behavior yourself, use the [evaluation guide](EVALUATION_GUIDE.md).
+It links runnable benchmarks and explains which results are synthetic, which
+require your own labeled outcomes, and which need a separately authorized live trial.
+
 ## Which package fits your problem?
 
 | Your problem | Start here | Verified release |
 |---|---|---|
-| A retrieval-augmented generation (RAG) application must keep unauthorized documents out of model context | [enterprise-rag-patterns](https://github.com/ashutoshrana/enterprise-rag-patterns) | [0.47.1 on PyPI](https://pypi.org/project/enterprise-rag-patterns/0.47.1/) |
+| A retrieval-augmented generation (RAG) application must keep unauthorized documents out of model context | [enterprise-rag-patterns](https://github.com/ashutoshrana/enterprise-rag-patterns) | [0.47.2 on PyPI](https://pypi.org/project/enterprise-rag-patterns/0.47.2/) |
 | A Haystack pipeline needs an identity-scoped document filter | [haystack-ferpa-filter](https://github.com/ashutoshrana/haystack-ferpa-filter), installed as `ferpa-haystack` | [0.3.1 on PyPI](https://pypi.org/project/ferpa-haystack/0.3.1/) |
 | An agent needs to withhold an action or escalate when its available confidence signals are insufficient | [confidence-escalation](https://github.com/ashutoshrana/confidence-escalation) | [0.3.0 on PyPI](https://pypi.org/project/confidence-escalation/0.3.0/) |
 | A voice application needs to preserve session context and redact a handoff to a human | [voice-ai-governance](https://github.com/ashutoshrana/voice-ai-governance) | [0.3.1 on PyPI](https://pypi.org/project/voice-ai-governance/0.3.1/) |
-| Events, webhooks, or tool-driven operations need retry handling and durable delivery | [integration-automation-patterns](https://github.com/ashutoshrana/integration-automation-patterns) | [0.44.1 on PyPI](https://pypi.org/project/integration-automation-patterns/0.44.1/) |
+| Events, webhooks, or tool-driven operations need retry handling and durable delivery | [integration-automation-patterns](https://github.com/ashutoshrana/integration-automation-patterns) | [0.44.2 on PyPI](https://pypi.org/project/integration-automation-patterns/0.44.2/) |
 
 These versions were verified during the September 2026 release work. For newer
 releases, check the package's PyPI page and changelog together. The [validation
 report](RELIABILITY_VALIDATION.md) records the tested revisions and limits.
+
+The reviewed main branches also contain unreleased changes: `ferpa-haystack`
+0.3.2, `voice-ai-governance` 0.4.0 and `confidence-escalation` 0.4.0. Their PyPI
+publication awaits trusted-publisher account configuration. Main-branch examples
+for these changes require the corresponding source revision; installing the older
+PyPI versions above does not provide the new APIs. See the validation report for
+exact revisions.
 
 ## Install the package you choose
 
@@ -33,11 +44,11 @@ source .venv/bin/activate
 
 | Package | Reproduce the verified release |
 |---|---|
-| Enterprise RAG | `python -m pip install enterprise-rag-patterns==0.47.1` |
+| Enterprise RAG | `python -m pip install enterprise-rag-patterns==0.47.2` |
 | Haystack filter | `python -m pip install ferpa-haystack==0.3.1` |
 | Confidence escalation | `python -m pip install confidence-escalation==0.3.0` |
 | Voice governance | `python -m pip install voice-ai-governance==0.3.1` |
-| Integration patterns | `python -m pip install integration-automation-patterns==0.44.1` |
+| Integration patterns | `python -m pip install integration-automation-patterns==0.44.2` |
 
 Follow the selected README for optional framework or Redis dependencies. Installing
 a library does not configure your model provider, database, phone service, or

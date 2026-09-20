@@ -1,0 +1,25 @@
+{
+  "package": "integration-automation-patterns",
+  "version": "0.44.2",
+  "verified_at": "2026-09-20T15:39:59.542723+00:00",
+  "artifacts": [
+    {
+      "filename": "integration_automation_patterns-0.44.2-py3-none-any.whl",
+      "sha256": "9be07ba57a929a65c3e38b44a03ed33e21081957ce5b4a623672c74890ab64bc",
+      "signature_verified": true,
+      "repository": "ashutoshrana/integration-automation-patterns",
+      "workflow": "publish.yml",
+      "source_commit": "c1c277819d31357e5ba9e077a1d056e98667ed3c",
+      "source_ref": "refs/tags/v0.44.2"
+    },
+    {
+      "filename": "integration_automation_patterns-0.44.2.tar.gz",
+      "sha256": "b1d62214d566f88126a6774dd084766f0e0df6232598553609c32c24238811c2",
+      "signature_verified": true,
+      "repository": "ashutoshrana/integration-automation-patterns",
+      "workflow": "publish.yml",
+      "source_commit": "c1c277819d31357e5ba9e077a1d056e98667ed3c",
+      "source_ref": "refs/tags/v0.44.2"
+    }
+  ]
+}

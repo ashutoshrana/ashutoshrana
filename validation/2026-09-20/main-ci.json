@@ -1,0 +1,56 @@
+[
+  {
+    "repository": "enterprise-rag-patterns",
+    "main_commit": "0d926d01627c195d449c45f4635d7b13cc7f0056",
+    "ci": {
+      "conclusion": "success",
+      "headSha": "0d926d01627c195d449c45f4635d7b13cc7f0056",
+      "url": "https://github.com/ashutoshrana/enterprise-rag-patterns/actions/runs/35519368081"
+    }
+  },
+  {
+    "repository": "integration-automation-patterns",
+    "main_commit": "c1c277819d31357e5ba9e077a1d056e98667ed3c",
+    "ci": {
+      "conclusion": "success",
+      "headSha": "c1c277819d31357e5ba9e077a1d056e98667ed3c",
+      "url": "https://github.com/ashutoshrana/integration-automation-patterns/actions/runs/35520106371"
+    }
+  },
+  {
+    "repository": "haystack-ferpa-filter",
+    "main_commit": "5f87c548960bee5b86e14d5dc01eabf8a4b35087",
+    "ci": {
+      "conclusion": "success",
+      "headSha": "5f87c548960bee5b86e14d5dc01eabf8a4b35087",
+      "url": "https://github.com/ashutoshrana/haystack-ferpa-filter/actions/runs/35519149199"
+    }
+  },
+  {
+    "repository": "voice-ai-governance",
+    "main_commit": "a24efbc61bb76265588ae375d520a7a543fdc38b",
+    "ci": {
+      "conclusion": "success",
+      "headSha": "a24efbc61bb76265588ae375d520a7a543fdc38b",
+      "url": "https://github.com/ashutoshrana/voice-ai-governance/actions/runs/35518785640"
+    }
+  },
+  {
+    "repository": "confidence-escalation",
+    "main_commit": "b704ac7c695a65ce5c87cff6ea109de3b75be76a",
+    "ci": {
+      "conclusion": "success",
+      "headSha": "b704ac7c695a65ce5c87cff6ea109de3b75be76a",
+      "url": "https://github.com/ashutoshrana/confidence-escalation/actions/runs/35518779218"
+    }
+  },
+  {
+    "repository": "regulated-ai-governance",
+    "main_commit": "664a753aa46062d5e07b0e3a35f8fbf2367a4638",
+    "ci": {
+      "conclusion": "success",
+      "headSha": "664a753aa46062d5e07b0e3a35f8fbf2367a4638",
+      "url": "https://github.com/ashutoshrana/regulated-ai-governance/actions/runs/34645157019"
+    }
+  }
+]

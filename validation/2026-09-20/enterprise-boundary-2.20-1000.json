@@ -1,0 +1,681 @@
+{
+  "schema_version": 1,
+  "fixture_sha256": "dca552d0cf820b55d93ff551ec51424ed09ceffca7b11a4ee919e2e01e537c64",
+  "versions": {
+    "haystack-ai": "2.20.0",
+    "enterprise-rag-patterns": "0.47.2",
+    "installed-enterprise-rag-patterns-metadata": "0.47.2",
+    "python": "3.12.12"
+  },
+  "source_sha256": {
+    "benchmark": "5cc31f5413681ef85c889df7d3056459b3e723b9fe9b11f88b61094890f22872",
+    "haystack_adapter": "1dd85d14bfa6fccf603def51484da7222085db2a4f895bab14fc9c649854156b"
+  },
+  "environment": {
+    "platform": "macOS-26.6.2-arm64-arm-64bit",
+    "processor": "arm"
+  },
+  "corpus_size": 1000,
+  "top_k": 20,
+  "repeats": 3,
+  "warmup_runs_per_path": 1,
+  "timing_scope": "pipeline execution; async includes asyncio.run overhead; excludes store/pipeline construction",
+  "negative_control_detected": true,
+  "protected_boundary_passed": true,
+  "authorized_utility_passed": true,
+  "limitations": "Enterprise Haystack adapter with explicit category allowlist; other framework routes are not benchmarked. Async pipeline executes the adapter's synchronous run method. Synthetic BM25 corpus and recording generator; no model quality, provider cache, external revocation or production performance claim. Native null/absent semantics differ from strict public classification.",
+  "results": [
+    {
+      "mode": "sync",
+      "path": "native",
+      "samples": [
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "null-public"
+          ],
+          "unauthorized_ids": [
+            "null-public"
+          ],
+          "unauthorized_count": 1,
+          "unauthorized_content_ids": [
+            "null-public"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 2.710375003516674
+        },
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "null-public"
+          ],
+          "unauthorized_ids": [
+            "null-public"
+          ],
+          "unauthorized_count": 1,
+          "unauthorized_content_ids": [
+            "null-public"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 2.5405409978702664
+        },
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "null-public"
+          ],
+          "unauthorized_ids": [
+            "null-public"
+          ],
+          "unauthorized_count": 1,
+          "unauthorized_content_ids": [
+            "null-public"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.461207961663604
+        }
+      ],
+      "latency_ms_p50": 2.710375003516674,
+      "latency_ms_p95": 3.461207961663604
+    },
+    {
+      "mode": "sync",
+      "path": "gate",
+      "samples": [
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 1.3202920090407133
+        },
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 1.9711250206455588
+        },
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 1.3640000252053142
+        }
+      ],
+      "latency_ms_p50": 1.3640000252053142,
+      "latency_ms_p95": 1.9711250206455588
+    },
+    {
+      "mode": "sync",
+      "path": "combined",
+      "samples": [
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.6596659338101745
+        },
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 2.851166995242238
+        },
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.2717499416321516
+        }
+      ],
+      "latency_ms_p50": 3.2717499416321516,
+      "latency_ms_p95": 3.6596659338101745
+    },
+    {
+      "mode": "sync",
+      "path": "bypass",
+      "samples": [
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "wrong-student",
+            "wrong-tenant",
+            "wrong-category",
+            "missing",
+            "malformed",
+            "conflicting-public",
+            "null-public",
+            "filler-0",
+            "filler-1",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "filler-10"
+          ],
+          "unauthorized_ids": [
+            "conflicting-public",
+            "filler-0",
+            "filler-1",
+            "filler-10",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "unauthorized_count": 18,
+          "unauthorized_content_ids": [
+            "conflicting-public",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 1.620833994820714
+        },
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "wrong-student",
+            "wrong-tenant",
+            "wrong-category",
+            "missing",
+            "malformed",
+            "conflicting-public",
+            "null-public",
+            "filler-0",
+            "filler-1",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "filler-10"
+          ],
+          "unauthorized_ids": [
+            "conflicting-public",
+            "filler-0",
+            "filler-1",
+            "filler-10",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "unauthorized_count": 18,
+          "unauthorized_content_ids": [
+            "conflicting-public",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 1.4060409739613533
+        },
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "wrong-student",
+            "wrong-tenant",
+            "wrong-category",
+            "missing",
+            "malformed",
+            "conflicting-public",
+            "null-public",
+            "filler-0",
+            "filler-1",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "filler-10"
+          ],
+          "unauthorized_ids": [
+            "conflicting-public",
+            "filler-0",
+            "filler-1",
+            "filler-10",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "unauthorized_count": 18,
+          "unauthorized_content_ids": [
+            "conflicting-public",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 1.5373339410871267
+        }
+      ],
+      "latency_ms_p50": 1.5373339410871267,
+      "latency_ms_p95": 1.620833994820714
+    },
+    {
+      "mode": "async",
+      "path": "native",
+      "samples": [
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "null-public"
+          ],
+          "unauthorized_ids": [
+            "null-public"
+          ],
+          "unauthorized_count": 1,
+          "unauthorized_content_ids": [
+            "null-public"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.726333030499518
+        },
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "null-public"
+          ],
+          "unauthorized_ids": [
+            "null-public"
+          ],
+          "unauthorized_count": 1,
+          "unauthorized_content_ids": [
+            "null-public"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.9780830265954137
+        },
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "null-public"
+          ],
+          "unauthorized_ids": [
+            "null-public"
+          ],
+          "unauthorized_count": 1,
+          "unauthorized_content_ids": [
+            "null-public"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.4923749044537544
+        }
+      ],
+      "latency_ms_p50": 3.726333030499518,
+      "latency_ms_p95": 3.9780830265954137
+    },
+    {
+      "mode": "async",
+      "path": "gate",
+      "samples": [
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 2.3919169325381517
+        },
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.0797080835327506
+        },
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 2.4734169710427523
+        }
+      ],
+      "latency_ms_p50": 2.4734169710427523,
+      "latency_ms_p95": 3.0797080835327506
+    },
+    {
+      "mode": "async",
+      "path": "combined",
+      "samples": [
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.6660420009866357
+        },
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.4896250581368804
+        },
+        {
+          "candidate_count": 3,
+          "observed_ids": [
+            "allowed",
+            "public"
+          ],
+          "unauthorized_ids": [],
+          "unauthorized_count": 0,
+          "unauthorized_content_ids": [],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 3.9488329784944654
+        }
+      ],
+      "latency_ms_p50": 3.6660420009866357,
+      "latency_ms_p95": 3.9488329784944654
+    },
+    {
+      "mode": "async",
+      "path": "bypass",
+      "samples": [
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "wrong-student",
+            "wrong-tenant",
+            "wrong-category",
+            "missing",
+            "malformed",
+            "conflicting-public",
+            "null-public",
+            "filler-0",
+            "filler-1",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "filler-10"
+          ],
+          "unauthorized_ids": [
+            "conflicting-public",
+            "filler-0",
+            "filler-1",
+            "filler-10",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "unauthorized_count": 18,
+          "unauthorized_content_ids": [
+            "conflicting-public",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 2.6825839886441827
+        },
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "wrong-student",
+            "wrong-tenant",
+            "wrong-category",
+            "missing",
+            "malformed",
+            "conflicting-public",
+            "null-public",
+            "filler-0",
+            "filler-1",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "filler-10"
+          ],
+          "unauthorized_ids": [
+            "conflicting-public",
+            "filler-0",
+            "filler-1",
+            "filler-10",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "unauthorized_count": 18,
+          "unauthorized_content_ids": [
+            "conflicting-public",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 2.6706670178100467
+        },
+        {
+          "candidate_count": 20,
+          "observed_ids": [
+            "allowed",
+            "public",
+            "wrong-student",
+            "wrong-tenant",
+            "wrong-category",
+            "missing",
+            "malformed",
+            "conflicting-public",
+            "null-public",
+            "filler-0",
+            "filler-1",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "filler-10"
+          ],
+          "unauthorized_ids": [
+            "conflicting-public",
+            "filler-0",
+            "filler-1",
+            "filler-10",
+            "filler-2",
+            "filler-3",
+            "filler-4",
+            "filler-5",
+            "filler-6",
+            "filler-7",
+            "filler-8",
+            "filler-9",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "unauthorized_count": 18,
+          "unauthorized_content_ids": [
+            "conflicting-public",
+            "malformed",
+            "missing",
+            "null-public",
+            "wrong-category",
+            "wrong-student",
+            "wrong-tenant"
+          ],
+          "authorized_recall": 1.0,
+          "elapsed_ms": 2.2683340357616544
+        }
+      ],
+      "latency_ms_p50": 2.6706670178100467,
+      "latency_ms_p95": 2.6825839886441827
+    }
+  ]
+}

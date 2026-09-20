@@ -1,5 +1,57 @@
 # Reliability and adoption validation
 
+## Current follow-up: 2026-09-20
+
+The merged changes below passed CI on their exact main commits. These results
+cover executable synthetic boundaries and package checks, not universal error
+freedom, legal compliance, independent adoption or live telephone delivery.
+
+| Package | Merged change | Exact main revision | CI | Publication |
+|---|---|---|---|---|
+| enterprise-rag-patterns | Actual retrieval/prompt benchmark; bypass and deny-all controls | `0d926d01627c195d449c45f4635d7b13cc7f0056` | [passed](https://github.com/ashutoshrana/enterprise-rag-patterns/actions/runs/35519368081) | [0.47.2](https://pypi.org/project/enterprise-rag-patterns/0.47.2/) |
+| integration-automation-patterns | Process crash/HTTP uncertainty contract, direct SQL baseline and current combined demo | `c1c277819d31357e5ba9e077a1d056e98667ed3c` | [passed](https://github.com/ashutoshrana/integration-automation-patterns/actions/runs/35520106371) | [0.44.2](https://pypi.org/project/integration-automation-patterns/0.44.2/) |
+| ferpa-haystack | Privacy-safe normal logs, full license, retrieval tutorial and benchmark | `5f87c548960bee5b86e14d5dc01eabf8a4b35087` | [passed](https://github.com/ashutoshrana/haystack-ferpa-filter/actions/runs/35519149199) | 0.3.2 prepared; PyPI remains 0.3.1 |
+| voice-ai-governance | Explicit recipient and consent; packet publication never means connected transfer | `a24efbc61bb76265588ae375d520a7a543fdc38b` | [passed](https://github.com/ashutoshrana/voice-ai-governance/actions/runs/35518785640) | 0.4.0 prepared; PyPI remains 0.3.1 |
+| confidence-escalation | Per-invocation evidence separate from risk; held-out evaluation harness | `b704ac7c695a65ce5c87cff6ea109de3b75be76a` | [passed](https://github.com/ashutoshrana/confidence-escalation/actions/runs/35518779218) | 0.4.0 prepared; PyPI remains 0.3.0 |
+
+The three pending packages now use artifact-specific OIDC publishing workflows
+without token fallback. Account-side trusted-publisher registration still needs
+verification before their release events can run. A green source CI run is not a
+completed publication.
+
+Enterprise 0.47.2 publication [passed](https://github.com/ashutoshrana/enterprise-rag-patterns/actions/runs/35519503710).
+Its wheel and source archive match PyPI SHA-256 metadata; their signatures,
+GitHub publisher, `publish.yml` workflow, `pypi` environment, tag and source commit
+were independently checked.
+
+Local acceptance: enterprise 1,904 unit plus 18 SDK tests; Haystack 64 unit plus
+32 integration tests; voice 164 tests including Redis; confidence 138 tests.
+Retrieval fixtures at 1,000 and 10,000 documents retained the two authorized
+fixture records and excluded denied content; this is a boundary test rather than
+a general retrieval-quality result. The voice handoff receipts are synthetic.
+Confidence evaluation mechanics pass, but no independent labeled cohort has yet
+been collected.
+
+Use the [evaluation guide](EVALUATION_GUIDE.md) for runnable entry points,
+independent reproduction records and explicit conditions for future integrations.
+
+Fresh local candidate-wheel acceptance passed 60 tests with zero failures/skips
+and a clean dependency check. All imports resolved inside the isolated installed
+environment. This validates the three pending candidates, not their publication.
+[Recorded results](validation/2026-09-20/README.md) retain benchmark source hashes
+and separate local candidates from signed PyPI release verification.
+
+Integration 0.44.2 publication [passed](https://github.com/ashutoshrana/integration-automation-patterns/actions/runs/35520178741).
+Both release artifacts passed the same hash, signature and source-identity checks.
+The six published versions installed in an isolated environment with no dependency
+conflicts; the combined synthetic workflow passed using installed packages.
+All 12 published wheel/source hashes matched PyPI. These installed versions still
+include the older releases of the three pending candidates listed above.
+Integration local validation passed 2,025 tests; the opt-in combined demo passed
+separately with its dependencies installed, and its exact-main CI also passed.
+
+## Historical release verification: 2026-09-19
+
 Review branches dated 2026-09-11 implement stricter retrieval boundaries,
 acknowledged audit delivery, durable database effects, and a combined synthetic
 workflow. Pull requests below are the source of truth for merge and CI status.

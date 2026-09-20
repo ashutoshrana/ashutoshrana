@@ -1,0 +1,67 @@
+{
+  "scope": "Local candidate wheels, not a PyPI publication verification",
+  "local_candidates": [
+    "voice-ai-governance",
+    "confidence-escalation",
+    "ferpa-haystack"
+  ],
+  "published_companions": [
+    "enterprise-rag-patterns",
+    "integration-automation-patterns",
+    "regulated-ai-governance"
+  ],
+  "versions": {
+    "voice-ai-governance": "0.4.0",
+    "confidence-escalation": "0.4.0",
+    "ferpa-haystack": "0.3.2",
+    "enterprise-rag-patterns": "0.47.2",
+    "integration-automation-patterns": "0.44.1",
+    "regulated-ai-governance": "0.45.0"
+  },
+  "origins": {
+    "voice_ai_governance": "voice_ai_governance/__init__.py",
+    "confidence_escalation": "confidence_escalation/__init__.py",
+    "haystack_integrations.components.filters.ferpa_filter.ferpa_metadata_filter": "haystack_integrations/components/filters/ferpa_filter/ferpa_metadata_filter.py",
+    "haystack_integrations.components.filters.ferpa_filter.multi_tenant_ferpa_filter": "haystack_integrations/components/filters/ferpa_filter/multi_tenant_ferpa_filter.py",
+    "haystack_integrations.components.filters.ferpa_filter.gdpr_erasure_filter": "haystack_integrations/components/filters/ferpa_filter/gdpr_erasure_filter.py",
+    "enterprise_rag_patterns": "enterprise_rag_patterns/__init__.py",
+    "integration_automation_patterns": "integration_automation_patterns/__init__.py",
+    "regulated_ai_governance": "regulated_ai_governance/__init__.py"
+  },
+  "pip_check": "No broken requirements found.",
+  "artifacts": {
+    "voice/voice_ai_governance-0.4.0.tar.gz": "d139825994c4c6736a5f24e71bc2f524684b77416c22f06da81ca6ec1ef7aaae",
+    "voice/voice_ai_governance-0.4.0-py3-none-any.whl": "e725feff42f5f6006ad8c900fd3eb314f8eb508b26d58b6f9181c885413b7cc2",
+    "confidence/confidence_escalation-0.4.0.tar.gz": "d98bb0af2aeac01f10dd847d984b6177d615288e6e80c8df89e1c3f7957e3b5a",
+    "confidence/confidence_escalation-0.4.0-py3-none-any.whl": "76578a0b46d1bb89faed4a298e379dda9e72e6e2976dc9f59df7dda154114ae6",
+    "ferpa/ferpa_haystack-0.3.2.tar.gz": "1737ed91f661c3e1d9f99bcfd1e4df2e3cb5536f1fd5d2e97695aa37861d708f",
+    "ferpa/ferpa_haystack-0.3.2-py3-none-any.whl": "a150249538f388330458de13e90fa4897c9240dadde03aa6974cbcb7f23ecff1"
+  },
+  "acceptance": {
+    "tests": "60",
+    "failures": "0",
+    "errors": "0",
+    "skipped": "0",
+    "time": "1.905",
+    "command": "venv/bin/python -I -m pytest acceptance --import-mode=importlib -q --junitxml=acceptance.xml",
+    "copied_tests": [
+      "test_livekit_adapter.py",
+      "test_log_privacy.py",
+      "test_openai_evidence_boundary.py",
+      "test_openai_sdk_execution.py",
+      "test_state_boundaries.py"
+    ],
+    "adaptation": "Only copied FERPA import statements changed from checkout flat names to installed canonical namespace; no source paths or conftest injected."
+  },
+  "source_commits": {
+    "voice-ai-governance": "a24efbc61bb76265588ae375d520a7a543fdc38b",
+    "confidence-escalation": "b704ac7c695a65ce5c87cff6ea109de3b75be76a",
+    "haystack-ferpa-filter": "5f87c548960bee5b86e14d5dc01eabf8a4b35087"
+  },
+  "source_worktree_status": {
+    "voice-ai-governance": "",
+    "confidence-escalation": "",
+    "haystack-ferpa-filter": ""
+  },
+  "origin_note": "Paths are relative to the fresh environment site-packages directory; the validator checked their absolute locations."
+}
