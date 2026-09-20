@@ -1,0 +1,25 @@
+{
+  "package": "enterprise-rag-patterns",
+  "version": "0.47.2",
+  "verified_at": "2026-09-20T15:28:56.898060+00:00",
+  "artifacts": [
+    {
+      "filename": "enterprise_rag_patterns-0.47.2-py3-none-any.whl",
+      "sha256": "7d9e77c37e62609e54223939f67c87b435c24739070f83972a4c9b1272422cc5",
+      "signature_verified": true,
+      "repository": "ashutoshrana/enterprise-rag-patterns",
+      "workflow": "publish.yml",
+      "source_commit": "0d926d01627c195d449c45f4635d7b13cc7f0056",
+      "source_ref": "refs/tags/v0.47.2"
+    },
+    {
+      "filename": "enterprise_rag_patterns-0.47.2.tar.gz",
+      "sha256": "5ccdc28ab52391e1c921aa258e6edc4f72e85a0c7ba2a36e8228e42b3d4e30a2",
+      "signature_verified": true,
+      "repository": "ashutoshrana/enterprise-rag-patterns",
+      "workflow": "publish.yml",
+      "source_commit": "0d926d01627c195d449c45f4635d7b13cc7f0056",
+      "source_ref": "refs/tags/v0.47.2"
+    }
+  ]
+}

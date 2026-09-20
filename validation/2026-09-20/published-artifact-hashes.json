@@ -1,0 +1,74 @@
+[
+  {
+    "package": "enterprise-rag-patterns",
+    "version": "0.47.2",
+    "filename": "enterprise_rag_patterns-0.47.2-py3-none-any.whl",
+    "sha256": "7d9e77c37e62609e54223939f67c87b435c24739070f83972a4c9b1272422cc5"
+  },
+  {
+    "package": "enterprise-rag-patterns",
+    "version": "0.47.2",
+    "filename": "enterprise_rag_patterns-0.47.2.tar.gz",
+    "sha256": "5ccdc28ab52391e1c921aa258e6edc4f72e85a0c7ba2a36e8228e42b3d4e30a2"
+  },
+  {
+    "package": "ferpa-haystack",
+    "version": "0.3.1",
+    "filename": "ferpa_haystack-0.3.1-py3-none-any.whl",
+    "sha256": "6b2ec2576f6f83a3dad406176f42d156adb16c8ecb217d5dd99fe575f79a8302"
+  },
+  {
+    "package": "ferpa-haystack",
+    "version": "0.3.1",
+    "filename": "ferpa_haystack-0.3.1.tar.gz",
+    "sha256": "cf3b291873171961d53719d87e05f8e21870e17742759370121ad17b13482223"
+  },
+  {
+    "package": "voice-ai-governance",
+    "version": "0.3.1",
+    "filename": "voice_ai_governance-0.3.1-py3-none-any.whl",
+    "sha256": "ed8842334976791efb4fd23fb243c581ed20e0cf8989704d578ba12f268234a7"
+  },
+  {
+    "package": "voice-ai-governance",
+    "version": "0.3.1",
+    "filename": "voice_ai_governance-0.3.1.tar.gz",
+    "sha256": "86f37b3fdcf65a01eb5315391644947b430a9aad18d42d68e89249d44bd8aa0d"
+  },
+  {
+    "package": "confidence-escalation",
+    "version": "0.3.0",
+    "filename": "confidence_escalation-0.3.0-py3-none-any.whl",
+    "sha256": "b07f53867b78dc872ad8a059dc18855d3c6f11d7d364a1f4cb9c00505ed19a05"
+  },
+  {
+    "package": "confidence-escalation",
+    "version": "0.3.0",
+    "filename": "confidence_escalation-0.3.0.tar.gz",
+    "sha256": "89a6984492eb9f6ef285d9b0b0d33625cd300f98a795d58ecd2b2a966b9c9a3d"
+  },
+  {
+    "package": "regulated-ai-governance",
+    "version": "0.45.0",
+    "filename": "regulated_ai_governance-0.45.0-py3-none-any.whl",
+    "sha256": "9497ce4b83a7314944cebb9bd512b8c98c5f62114621d9d5a476b71b25ee54f6"
+  },
+  {
+    "package": "regulated-ai-governance",
+    "version": "0.45.0",
+    "filename": "regulated_ai_governance-0.45.0.tar.gz",
+    "sha256": "8924978bac6b40bf9082d7555bfadab8ecfc7f53181a18592eb2f81e67099940"
+  },
+  {
+    "package": "integration-automation-patterns",
+    "version": "0.44.2",
+    "filename": "integration_automation_patterns-0.44.2-py3-none-any.whl",
+    "sha256": "9be07ba57a929a65c3e38b44a03ed33e21081957ce5b4a623672c74890ab64bc"
+  },
+  {
+    "package": "integration-automation-patterns",
+    "version": "0.44.2",
+    "filename": "integration_automation_patterns-0.44.2.tar.gz",
+    "sha256": "b1d62214d566f88126a6774dd084766f0e0df6232598553609c32c24238811c2"
+  }
+]

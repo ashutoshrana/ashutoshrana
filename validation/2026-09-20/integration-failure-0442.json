@@ -1,0 +1,215 @@
+{
+  "scope": "local synthetic observations, not production SLOs or remote exactly-once guarantees",
+  "provenance": {
+    "runtime_version": "0.44.2",
+    "installed_distribution_version": "0.44.2",
+    "version_matches_metadata": true,
+    "executed_source_sha256": {
+      "harness": "d4b531cf7d6b4f69908bb5c569d1ca9d3307841a4b5a027fe65fddc64a57f554",
+      "package_init": "1ed7a111b3f8470ab755de41d9c90de85903c5bac94a99eef69a193754d47c16",
+      "sqlite_outbox": "043962b07d537820b7a45b09a2f00ca69981d1fa28dfc9ff508694842d3e40f0"
+    },
+    "harness_checkout_revision": "34bb3c74b2a9ba8c15a458d4398d31f71df3137e",
+    "harness_checkout_dirty": true
+  },
+  "runtime": {
+    "python": "3.14.4",
+    "sqlite": "3.53.4",
+    "platform": "macOS-26.6.2-arm64-arm-64bit-Mach-O"
+  },
+  "events": 10000,
+  "workers": [
+    1,
+    2,
+    8
+  ],
+  "deadline_per_process_group_seconds": 600.0,
+  "crashes": [
+    {
+      "boundary": "before",
+      "exit_code": 23,
+      "effects_after_crash": 0,
+      "pending_after_crash": 1,
+      "replay_created": true,
+      "final_effects": 1
+    },
+    {
+      "boundary": "after",
+      "exit_code": 23,
+      "effects_after_crash": 1,
+      "pending_after_crash": 1,
+      "replay_created": false,
+      "final_effects": 1
+    }
+  ],
+  "http": [
+    {
+      "downstream_idempotency": false,
+      "client_outcomes": [
+        "unknown",
+        "acknowledged"
+      ],
+      "remote_effects": 2,
+      "requests": 2,
+      "pending": 0
+    },
+    {
+      "downstream_idempotency": true,
+      "client_outcomes": [
+        "unknown",
+        "acknowledged"
+      ],
+      "remote_effects": 1,
+      "requests": 2,
+      "pending": 0
+    }
+  ],
+  "benchmarks": [
+    {
+      "engine": "sql",
+      "workers": 1,
+      "unique_events": 10000,
+      "attempts": 20000,
+      "created": 10000,
+      "effects": 10000,
+      "sqlite_errors": 0,
+      "elapsed_seconds": 4.722903624991886,
+      "attempts_per_second": 4234.683065342956,
+      "latency_ms": {
+        "p50": 0.248583,
+        "p95": 0.485958,
+        "p99": 2.221792
+      },
+      "sqlite_settings": {
+        "journal_mode": "delete",
+        "synchronous": 2
+      },
+      "database_bytes": 507904
+    },
+    {
+      "engine": "helper",
+      "workers": 1,
+      "unique_events": 10000,
+      "attempts": 20000,
+      "created": 10000,
+      "effects": 10000,
+      "sqlite_errors": 0,
+      "elapsed_seconds": 4.541698458022438,
+      "attempts_per_second": 4403.638899599792,
+      "latency_ms": {
+        "p50": 0.260042,
+        "p95": 0.493542,
+        "p99": 1.028125
+      },
+      "sqlite_settings": {
+        "journal_mode": "delete",
+        "synchronous": 2
+      },
+      "database_bytes": 507904
+    },
+    {
+      "engine": "sql",
+      "workers": 2,
+      "unique_events": 10000,
+      "attempts": 40000,
+      "created": 10000,
+      "effects": 10000,
+      "sqlite_errors": 0,
+      "elapsed_seconds": 5.623934124945663,
+      "attempts_per_second": 7112.458843103264,
+      "latency_ms": {
+        "p50": 0.057583,
+        "p95": 0.393167,
+        "p99": 0.748583
+      },
+      "sqlite_settings": {
+        "journal_mode": "delete",
+        "synchronous": 2
+      },
+      "database_bytes": 507904
+    },
+    {
+      "engine": "helper",
+      "workers": 2,
+      "unique_events": 10000,
+      "attempts": 40000,
+      "created": 10000,
+      "effects": 10000,
+      "sqlite_errors": 0,
+      "elapsed_seconds": 5.571734167053364,
+      "attempts_per_second": 7179.093402647774,
+      "latency_ms": {
+        "p50": 0.058792,
+        "p95": 0.377583,
+        "p99": 1.377875
+      },
+      "sqlite_settings": {
+        "journal_mode": "delete",
+        "synchronous": 2
+      },
+      "database_bytes": 507904
+    },
+    {
+      "engine": "sql",
+      "workers": 8,
+      "unique_events": 10000,
+      "attempts": 160000,
+      "created": 10000,
+      "effects": 10000,
+      "sqlite_errors": 0,
+      "elapsed_seconds": 16.08387029194273,
+      "attempts_per_second": 9947.854409156267,
+      "latency_ms": {
+        "p50": 0.060583,
+        "p95": 1.121,
+        "p99": 9.145375
+      },
+      "sqlite_settings": {
+        "journal_mode": "delete",
+        "synchronous": 2
+      },
+      "database_bytes": 507904
+    },
+    {
+      "engine": "helper",
+      "workers": 8,
+      "unique_events": 10000,
+      "attempts": 160000,
+      "created": 10000,
+      "effects": 10000,
+      "sqlite_errors": 0,
+      "elapsed_seconds": 16.448708083014935,
+      "attempts_per_second": 9727.207704854174,
+      "latency_ms": {
+        "p50": 0.060459,
+        "p95": 1.352375,
+        "p99": 9.944125
+      },
+      "sqlite_settings": {
+        "journal_mode": "delete",
+        "synchronous": 2
+      },
+      "database_bytes": 507904
+    }
+  ],
+  "lock": {
+    "created": true,
+    "wait_ms": 5.417666048742831,
+    "observed_contention": {
+      "confirmed": true,
+      "code": 5,
+      "name": "SQLITE_BUSY",
+      "message": "database is locked",
+      "evidence": "sqlite_errorcode"
+    },
+    "completed_while_locked": false,
+    "configured_timeout_seconds": 30
+  },
+  "backlog": {
+    "records": 10000,
+    "elapsed_seconds": 0.028942625038325787,
+    "python_peak_bytes": 3743563,
+    "database_bytes": 434176,
+    "measurement": "tracemalloc allocations, not process RSS"
+  }
+}

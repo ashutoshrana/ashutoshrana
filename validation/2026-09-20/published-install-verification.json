@@ -1,0 +1,47 @@
+{
+  "scope": "Installed published PyPI packages; no source path injection",
+  "versions": {
+    "enterprise-rag-patterns": "0.47.2",
+    "integration-automation-patterns": "0.44.2",
+    "voice-ai-governance": "0.3.1",
+    "confidence-escalation": "0.3.0",
+    "regulated-ai-governance": "0.45.0",
+    "ferpa-haystack": "0.3.1"
+  },
+  "origins_relative_to_site_packages": {
+    "enterprise_rag_patterns": "enterprise_rag_patterns/__init__.py",
+    "integration_automation_patterns": "integration_automation_patterns/__init__.py",
+    "voice_ai_governance": "voice_ai_governance/__init__.py",
+    "confidence_escalation": "confidence_escalation/__init__.py",
+    "regulated_ai_governance": "regulated_ai_governance/__init__.py",
+    "haystack_integrations.components.filters.ferpa_filter.ferpa_metadata_filter": "haystack_integrations/components/filters/ferpa_filter/ferpa_metadata_filter.py"
+  },
+  "pip_check": "No broken requirements found.",
+  "combined_synthetic_demo": {
+    "directory": "/private/tmp/personal-ai-research-20260920/final-pypi-demo/results0442",
+    "scope": "synthetic local fixtures; fake model and reviewer; not production calibration",
+    "unauthorized_disclosures": 0,
+    "unauthorized_actions": 0,
+    "duplicate_effects": 0,
+    "business_effects": [
+      "success",
+      "approved"
+    ],
+    "escalation_accuracy": 1.0,
+    "effects_before_replay": 1,
+    "pending_after_crash": [
+      "success"
+    ],
+    "statuses": {
+      "success": "done",
+      "approved": "done",
+      "revoked": "denied",
+      "denied": "denied"
+    },
+    "handoff_redaction_failures": 0,
+    "audit_record_count": 11,
+    "span_count": 13,
+    "shared_trace_count": 1,
+    "latency_ms": 714.838
+  }
+}
