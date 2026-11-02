@@ -42,9 +42,9 @@ For a combined example, use the [governed service demo](https://github.com/ashut
 - [Three Security Issues Specific to Multi-Agent AI Systems (OWASP Agentic AI Top 10)](https://dev.to/ashutoshrana/the-owasp-agentic-ai-top-10-three-attacks-that-actually-happen-in-production-with-code-38o7) *(dev.to, May 2026)*
 - [EU AI Act Goes Live in 90 Days: What Developers Building AI Agents Actually Need to Do](https://dev.to/ashutoshrana/eu-ai-act-goes-live-in-90-days-what-developers-building-ai-agents-actually-need-to-do-4bah) *(dev.to, May 2026)*
 - [MACF: The 6-Component Framework Every Enterprise Multi-Agent AI System Needs](https://dev.to/ashutoshrana/macf-the-6-component-framework-every-enterprise-multi-agent-ai-system-needs-a0) *(dev.to, April 2026)*
-- [Every Enterprise AI Framework Has a Compliance Gap — Here's the Architecture That Closes It](https://dev.to/ashutoshrana/every-enterprise-ai-framework-has-a-compliance-gap-heres-the-architecture-that-closes-it-20np) *(dev.to, April 2026)*
+- [Enterprise AI Governance: Put Policy Checks Before Tool and Data Access](https://dev.to/ashutoshrana/every-enterprise-ai-framework-has-a-compliance-gap-heres-the-architecture-that-closes-it-20np) *(dev.to, April 2026; updated November 2026)*
 - [Google ADK Has a Compliance Gap — Here's How to Close It](https://dev.to/ashutoshrana/google-adk-has-a-compliance-gap-heres-how-to-close-it-1k18) *(dev.to, April 2026)*
-- [FERPA Compliance in RAG Pipelines: Five Rules Your Enterprise System Probably Breaks](https://dev.to/ashutoshrana/ferpa-compliance-in-rag-pipelines-five-rules-your-enterprise-system-probably-breaks-5762) *(dev.to, April 2026)*
+- [FERPA-Aware RAG Pipelines: Five Controls to Review Before Deployment](https://dev.to/ashutoshrana/ferpa-compliance-in-rag-pipelines-five-rules-your-enterprise-system-probably-breaks-5762) *(dev.to, April 2026; updated November 2026)*
 
 ### Implementation notes — enterprise-rag-patterns
 
