@@ -36,9 +36,14 @@ For a combined example, use the [governed service demo](https://github.com/ashut
 
 ## Published writing
 
-### Articles
+### Selected articles
 
+- [The Agentic Era Is Here: 7 AI Trends Every Developer Must Know in 2026](https://dev.to/ashutoshrana/the-agentic-era-is-here-7-ai-trends-every-developer-must-know-in-2026-42dk) *(dev.to, May 2026)*
+- [Three Security Issues Specific to Multi-Agent AI Systems (OWASP Agentic AI Top 10)](https://dev.to/ashutoshrana/the-owasp-agentic-ai-top-10-three-attacks-that-actually-happen-in-production-with-code-38o7) *(dev.to, May 2026)*
+- [EU AI Act Goes Live in 90 Days: What Developers Building AI Agents Actually Need to Do](https://dev.to/ashutoshrana/eu-ai-act-goes-live-in-90-days-what-developers-building-ai-agents-actually-need-to-do-4bah) *(dev.to, May 2026)*
+- [MACF: The 6-Component Framework Every Enterprise Multi-Agent AI System Needs](https://dev.to/ashutoshrana/macf-the-6-component-framework-every-enterprise-multi-agent-ai-system-needs-a0) *(dev.to, April 2026)*
 - [Every Enterprise AI Framework Has a Compliance Gap — Here's the Architecture That Closes It](https://dev.to/ashutoshrana/every-enterprise-ai-framework-has-a-compliance-gap-heres-the-architecture-that-closes-it-20np) *(dev.to, April 2026)*
+- [Google ADK Has a Compliance Gap — Here's How to Close It](https://dev.to/ashutoshrana/google-adk-has-a-compliance-gap-heres-how-to-close-it-1k18) *(dev.to, April 2026)*
 - [FERPA Compliance in RAG Pipelines: Five Rules Your Enterprise System Probably Breaks](https://dev.to/ashutoshrana/ferpa-compliance-in-rag-pipelines-five-rules-your-enterprise-system-probably-breaks-5762) *(dev.to, April 2026)*
 
 ### Implementation notes — enterprise-rag-patterns
@@ -64,9 +69,14 @@ For a combined example, use the [governed service demo](https://github.com/ashut
 - [Note 12 — API Gateway Patterns: The Six Problems Every Production Gateway Must Solve](https://github.com/ashutoshrana/integration-automation-patterns/blob/main/docs/implementation-note-12.md)
 - [Agentic AI Security Trends 2026: Integration and Tool-Safety Perspective](https://github.com/ashutoshrana/integration-automation-patterns/blob/main/docs/agentic-security-trends-2026.md)
 
-## Published book
+## Published books
 
-**[Silos to Synergy: Practical Strategies for Enterprise AI Integration](https://www.amazon.com/dp/B0GX11TVWP)** — Covers compliance-aware AI deployment, multi-system orchestration, and enterprise integration patterns for regulated environments.
+- [Silos to Synergy: Practical Strategies for Enterprise AI Integration](https://www.amazon.com/dp/B0GX11TVWP) — Covers compliance-aware AI deployment, multi-system orchestration, and enterprise integration patterns for regulated environments.
+
+- [AI Made Simple: The Everyday Guide to Using AI Assistants to Save Time, Work Smarter and Live Better](https://www.amazon.com/dp/B0HNQWJH2Z) *(co-author, October 2026)*
+- [AI for Electric Vehicle Batteries: A Hands-On Python Guide to State of Charge, State of Health, Remaining Life and Smart Charging](https://www.amazon.com/dp/B0HLPBS44W) *(co-author, October 2026)*
+- [TinyML and Edge AI with ESP32 and Raspberry Pi: A Hands-On Guide to Building Intelligent, Offline AI Devices](https://www.amazon.com/dp/B0HJV4LRRK) *(co-author, September 2026)*
+- [AI and Deep Learning with Arduino and Raspberry Pi: A Hands-On Guide to Smart IoT Projects](https://www.amazon.com/dp/B0HJVBVX11) *(co-author, September 2026)*
 
 ## Live demos
 
